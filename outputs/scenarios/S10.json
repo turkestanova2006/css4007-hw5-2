@@ -1,0 +1,26 @@
+[
+  {
+    "event": {
+      "action": "message",
+      "user_id": "demo-user-a",
+      "thread_id": "s10",
+      "message": "I cannot connect to Wi-Fi. I enabled it and forgot the saved network, but reconnecting failed."
+    },
+    "response": {
+      "answer": "Let's try a few steps to troubleshoot your Wi-Fi connection issue:\n\n1. **Restart Your Device**: Sometimes a simple restart can resolve connectivity issues.\n\n2. **Check Wi-Fi Settings**: Make sure Wi-Fi is enabled on your device. Sometimes it can be toggled off accidentally.\n\n3. **Forget and Reconnect**: Since you've already forgotten the network, try reconnecting again:\n   - Go to your Wi-Fi settings.\n   - Select the network you want to connect to.\n   - Enter the password carefully (make sure there are no typos).\n\n4. **Check for Airplane Mode**: Ensure that Airplane Mode is turned off, as this can disable Wi-Fi.\n\n5. **Network Availability**: Confirm that the Wi-Fi network is available and functioning. You can check this by trying to connect with another device.\n\n6. **Update Network Drivers** (if applicable): If you're using a laptop or desktop, ensure that your network drivers are up to date.\n\n7. **Reset Network Settings**: If the issue persists, you might consider resetting your network settings. This will remove all saved networks and passwords, so you'll need to reconnect to all Wi-Fi networks afterward.\n\nIf you've tried all these steps and still can't connect, please let me know what device you're using, and I can provide more specific guidance.",
+      "language": null
+    }
+  },
+  {
+    "event": {
+      "action": "message",
+      "user_id": "demo-user-a",
+      "thread_id": "s10",
+      "message": "Which steps did I already try?"
+    },
+    "response": {
+      "answer": "You've mentioned that you enabled Wi-Fi and forgot the saved network, but reconnecting failed. If you haven't tried the other steps I listed, you might want to go through them to see if any help resolve the issue. Let me know if you need assistance with any specific step!",
+      "language": null
+    }
+  }
+]

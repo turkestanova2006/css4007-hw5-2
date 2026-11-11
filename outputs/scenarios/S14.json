@@ -1,0 +1,47 @@
+{
+  "scenario": "S14",
+  "profile": "recovery_outage",
+  "turns": [
+    {
+      "question": "My password recovery page is unavailable. Check the service status. Is there a known problem?",
+      "answer": "The password recovery service is currently experiencing an outage and is unavailable. Unfortunately, there is no information on a repair time at the moment. \n\nWould you like assistance with anything else, or do you have any specific questions regarding this issue?",
+      "tools_so_far": [
+        "check_service_status"
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "type": "human",
+      "content": "My password recovery page is unavailable. Check the service status. Is there a known problem?",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "check_service_status",
+          "args": {
+            "service": "password recovery"
+          },
+          "id": "call_sZn3g6IMgmDKqOq0mpxrwH8f",
+          "type": "tool_call"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "content": "{\"status\": \"outage\", \"message\": \"The demo account-recovery service is unavailable. The fixture gives no repair time.\"}",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "The password recovery service is currently experiencing an outage and is unavailable. Unfortunately, there is no information on a repair time at the moment. \n\nWould you like assistance with anything else, or do you have any specific questions regarding this issue?",
+      "tool_calls": []
+    }
+  ],
+  "tools": [
+    "check_service_status"
+  ]
+}

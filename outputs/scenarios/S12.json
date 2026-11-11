@@ -1,0 +1,30 @@
+[
+  {
+    "event": {
+      "action": "message",
+      "user_id": "demo-user-a",
+      "thread_id": "preference-a1",
+      "message": "Please remember that I prefer replies in Kazakh. I have a Wi-Fi problem."
+    },
+    "response": {
+      "answer": "Сәлем! Wi-Fi мәселеңіз туралы айтып берсеңіз, мен көмектесуге тырысамын. Не болып жатыр?",
+      "language": "Kazakh"
+    }
+  },
+  {
+    "action": "restart_process",
+    "preserve_local_storage": true
+  },
+  {
+    "event": {
+      "action": "message",
+      "user_id": "demo-user-a",
+      "thread_id": "preference-a2",
+      "message": "Which language did I ask you to use? What can you help with?"
+    },
+    "response": {
+      "answer": "Сіз мені қазақ тілінде жауап беруімді сұрадыңыз. Мен университеттің IT көмек көрсету қызметінде көмектесе аламын, мысалы, техникалық мәселелерді шешу, бағдарламалық қамтамасыз ету, желі мәселелері және басқа да IT сұрақтары бойынша. Сізге не көмектесе аламын?",
+      "language": "Kazakh"
+    }
+  }
+]

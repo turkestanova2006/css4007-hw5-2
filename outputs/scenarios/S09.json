@@ -1,0 +1,84 @@
+{
+  "scenario": "S09",
+  "profile": "normal",
+  "turns": [
+    {
+      "question": "Prepare a support ticket.",
+      "answer": "Could you please provide me with the details of the problem you're experiencing and any steps you've already tried to resolve it?",
+      "tools_so_far": []
+    },
+    {
+      "question": "The issue is Wi-Fi. I enabled it and tried reconnecting, but it still fails.",
+      "answer": "I have prepared a support ticket for your Wi-Fi issue. Here are the details:\n\n- **Problem:** Wi-Fi is enabled but fails to reconnect.\n- **Steps Tried:** Enabled Wi-Fi and tried reconnecting.\n- **Service Status:** Operational\n\nIf you need to add any additional information or if you're ready to submit the ticket, please let me know!",
+      "tools_so_far": [
+        "check_service_status",
+        "prepare_ticket"
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "type": "human",
+      "content": "Prepare a support ticket.",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "Could you please provide me with the details of the problem you're experiencing and any steps you've already tried to resolve it?",
+      "tool_calls": []
+    },
+    {
+      "type": "human",
+      "content": "The issue is Wi-Fi. I enabled it and tried reconnecting, but it still fails.",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "check_service_status",
+          "args": {
+            "service": "Wi-Fi"
+          },
+          "id": "call_JBUXmliEOxKnypmX0YtsZGr5",
+          "type": "tool_call"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "content": "{\"status\": \"operational\", \"message\": \"The demo Wi-Fi service has no reported outage.\"}",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "prepare_ticket",
+          "args": {
+            "problem": "Wi-Fi is enabled but fails to reconnect.",
+            "steps_tried": "Enabled Wi-Fi and tried reconnecting."
+          },
+          "id": "call_luDQGPYydu4UGQD2Kl0c2Qnh",
+          "type": "tool_call"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "content": "{\"file\": \"outputs/tickets/0045b164.json\", \"ticket\": {\"ticket_id\": \"0045b164\", \"status\": \"draft\", \"user_id\": null, \"thread_id\": null, \"category\": \"wifi\", \"summary\": \"Wi-Fi is enabled but fails to reconnect.\", \"steps_tried\": [\"Enabled Wi-Fi; Connection still fails\"], \"service_status\": \"operational\", \"status_profile\": \"normal\", \"reference_ids\": []}}",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "I have prepared a support ticket for your Wi-Fi issue. Here are the details:\n\n- **Problem:** Wi-Fi is enabled but fails to reconnect.\n- **Steps Tried:** Enabled Wi-Fi and tried reconnecting.\n- **Service Status:** Operational\n\nIf you need to add any additional information or if you're ready to submit the ticket, please let me know!",
+      "tool_calls": []
+    }
+  ],
+  "tools": [
+    "check_service_status",
+    "prepare_ticket"
+  ]
+}

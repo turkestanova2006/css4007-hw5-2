@@ -1,0 +1,26 @@
+[
+  {
+    "event": {
+      "action": "message",
+      "user_id": "demo-user-a",
+      "thread_id": "isolation-a",
+      "message": "Please remember that I prefer replies in Kazakh. I have a Wi-Fi problem."
+    },
+    "response": {
+      "answer": "Сәлем! Wi-Fi мәселеңіз туралы айтып берсеңіз, мен көмектесуге тырысамын. Не болып жатыр?",
+      "language": "Kazakh"
+    }
+  },
+  {
+    "event": {
+      "action": "message",
+      "user_id": "demo-user-b",
+      "thread_id": "isolation-b",
+      "message": "Have I told you a preferred language or a previous problem?"
+    },
+    "response": {
+      "answer": "No, you haven't mentioned a preferred language or a previous problem in this conversation. How can I assist you today?",
+      "language": null
+    }
+  }
+]

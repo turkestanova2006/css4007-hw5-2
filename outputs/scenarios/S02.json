@@ -1,0 +1,22 @@
+{
+  "scenario": "S02",
+  "message": "I forgot my PASSWORD.",
+  "nodes": [
+    "read_request",
+    "password_help"
+  ],
+  "category": "password",
+  "reply": "Recover access to the practice account\nOpen the practice sign-in screen and choose Forgot password.\nFollow the recovery instructions shown by the practice application.\nIf recovery is unavailable, prepare a ticket describing the error.\nNever include a password or recovery code in a ticket.",
+  "trace": [
+    {
+      "read_request": {
+        "category": "password"
+      }
+    },
+    {
+      "password_help": {
+        "reply": "Recover access to the practice account\nOpen the practice sign-in screen and choose Forgot password.\nFollow the recovery instructions shown by the practice application.\nIf recovery is unavailable, prepare a ticket describing the error.\nNever include a password or recovery code in a ticket."
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "scenario": "S06",
+  "profile": "normal",
+  "turns": [
+    {
+      "question": "Show me the Wi-Fi troubleshooting steps.",
+      "answer": "Here are the Wi-Fi troubleshooting steps:\n\n1. Check that Wi-Fi is enabled and airplane mode is off.\n2. Select the fictional Campus-Demo network.\n3. If the connection fails, forget the saved network and try connecting again.\n4. If the problem remains, check the service status before preparing a ticket.\n\nIf you need further assistance or want to check the service status, let me know!",
+      "tools_so_far": [
+        "find_instructions"
+      ]
+    },
+    {
+      "question": "I enabled Wi-Fi and forgot the saved network, but Campus-Demo still will not connect. Check whether Wi-Fi is down. If it is operating, prepare a ticket about this problem.",
+      "answer": "The Wi-Fi service is operational, and I have prepared a draft ticket for your issue. Here are the details:\n\n- **Summary**: Unable to connect to Campus-Demo Wi-Fi network after enabling Wi-Fi and forgetting the saved network.\n- **Steps Tried**: \n  - Enabled Wi-Fi\n  - Forgot the saved network\n  - Connection still fails\n\nIf you would like to submit this ticket or need any changes, please let me know!",
+      "tools_so_far": [
+        "find_instructions",
+        "check_service_status",
+        "prepare_ticket"
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "type": "human",
+      "content": "Show me the Wi-Fi troubleshooting steps.",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "find_instructions",
+          "args": {
+            "topic": "wifi"
+          },
+          "id": "call_8NHvmZlGgWkTkJQUS7ZHLmib",
+          "type": "tool_call"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "content": "{\"title\": \"Connect to the practice campus network\", \"steps\": [\"Check that Wi-Fi is enabled and airplane mode is off.\", \"Select the fictional Campus-Demo network.\", \"If connection fails, forget the saved network and try connecting again.\", \"If the problem remains, check the service status before preparing a ticket.\"], \"instruction_id\": \"GUIDE-WIFI\"}",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "Here are the Wi-Fi troubleshooting steps:\n\n1. Check that Wi-Fi is enabled and airplane mode is off.\n2. Select the fictional Campus-Demo network.\n3. If the connection fails, forget the saved network and try connecting again.\n4. If the problem remains, check the service status before preparing a ticket.\n\nIf you need further assistance or want to check the service status, let me know!",
+      "tool_calls": []
+    },
+    {
+      "type": "human",
+      "content": "I enabled Wi-Fi and forgot the saved network, but Campus-Demo still will not connect. Check whether Wi-Fi is down. If it is operating, prepare a ticket about this problem.",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "check_service_status",
+          "args": {
+            "service": "Wi-Fi"
+          },
+          "id": "call_81iLX5bMTyY3L9cXbYHzoXP3",
+          "type": "tool_call"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "content": "{\"status\": \"operational\", \"message\": \"The demo Wi-Fi service has no reported outage.\"}",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "prepare_ticket",
+          "args": {
+            "problem": "Unable to connect to Campus-Demo Wi-Fi network after enabling Wi-Fi and forgetting the saved network.",
+            "steps_tried": "Enabled Wi-Fi, forgot the saved network, attempted to reconnect."
+          },
+          "id": "call_AFOphTKgXGhApNN3k4Keez6l",
+          "type": "tool_call"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "content": "{\"file\": \"outputs/tickets/e681262c.json\", \"ticket\": {\"ticket_id\": \"e681262c\", \"status\": \"draft\", \"user_id\": null, \"thread_id\": null, \"category\": \"wifi\", \"summary\": \"Unable to connect to Campus-Demo Wi-Fi network after enabling Wi-Fi and forgetting the saved network.\", \"steps_tried\": [\"Enabled Wi-Fi; Forgot the saved network; Connection still fails\"], \"service_status\": \"operational\", \"status_profile\": \"normal\", \"reference_ids\": []}}",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "The Wi-Fi service is operational, and I have prepared a draft ticket for your issue. Here are the details:\n\n- **Summary**: Unable to connect to Campus-Demo Wi-Fi network after enabling Wi-Fi and forgetting the saved network.\n- **Steps Tried**: \n  - Enabled Wi-Fi\n  - Forgot the saved network\n  - Connection still fails\n\nIf you would like to submit this ticket or need any changes, please let me know!",
+      "tool_calls": []
+    }
+  ],
+  "tools": [
+    "find_instructions",
+    "check_service_status",
+    "prepare_ticket"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "scenario": "S03",
+  "message": "My laptop screen is broken.",
+  "nodes": [
+    "read_request",
+    "other_help"
+  ],
+  "category": "other",
+  "reply": "Is your problem about Wi-Fi or password?",
+  "trace": [
+    {
+      "read_request": {
+        "category": "other"
+      }
+    },
+    {
+      "other_help": {
+        "reply": "Is your problem about Wi-Fi or password?"
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "version": "original",
+    "message": "I cannot connect to Wi-Fi.",
+    "trace": [
+      {
+        "read_request": {
+          "category": "wifi"
+        }
+      },
+      {
+        "wifi_help": {
+          "reply": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+        }
+      }
+    ]
+  },
+  {
+    "version": "original",
+    "message": "I forgot my PASSWORD.",
+    "trace": [
+      {
+        "read_request": {
+          "category": "password"
+        }
+      },
+      {
+        "password_help": {
+          "reply": "Recover access to the practice account\nOpen the practice sign-in screen and choose Forgot password.\nFollow the recovery instructions shown by the practice application.\nIf recovery is unavailable, prepare a ticket describing the error.\nNever include a password or recovery code in a ticket."
+        }
+      }
+    ]
+  },
+  {
+    "version": "original",
+    "message": "My laptop screen is broken.",
+    "trace": [
+      {
+        "read_request": {
+          "category": "other"
+        }
+      },
+      {
+        "other_help": {
+          "reply": "Is your problem about Wi-Fi or password?"
+        }
+      }
+    ]
+  },
+  {
+    "version": "original",
+    "message": "My Wi-Fi password does not work.",
+    "trace": [
+      {
+        "read_request": {
+          "category": "wifi"
+        }
+      },
+      {
+        "wifi_help": {
+          "reply": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+        }
+      }
+    ]
+  },
+  {
+    "version": "updated",
+    "message": "I cannot connect to Wi-Fi.",
+    "trace": [
+      {
+        "read_request": {
+          "category": "wifi"
+        }
+      },
+      {
+        "wifi_help": {
+          "reply": "Connect to the practice campus network\nCheck that Wi-Fi is enabled and airplane mode is off.\nSelect the fictional Campus-Demo network.\nIf connection fails, forget the saved network and try connecting again.\nIf the problem remains, check the service status before preparing a ticket."
+        }
+      }
+    ]
+  },
+  {
+    "version": "updated",
+    "message": "I forgot my PASSWORD.",
+    "trace": [
+      {
+        "read_request": {
+          "category": "password"
+        }
+      },
+      {
+        "password_help": {
+          "reply": "Recover access to the practice account\nOpen the practice sign-in screen and choose Forgot password.\nFollow the recovery instructions shown by the practice application.\nIf recovery is unavailable, prepare a ticket describing the error.\nNever include a password or recovery code in a ticket."
+        }
+      }
+    ]
+  },
+  {
+    "version": "updated",
+    "message": "My laptop screen is broken.",
+    "trace": [
+      {
+        "read_request": {
+          "category": "other"
+        }
+      },
+      {
+        "other_help": {
+          "reply": "Is your problem about Wi-Fi or password?"
+        }
+      }
+    ]
+  },
+  {
+    "version": "updated",
+    "message": "My Wi-Fi password does not work.",
+    "trace": [
+      {
+        "read_request": {
+          "category": "clarify"
+        }
+      },
+      {
+        "clarify_problem": {
+          "reply": "Do you need Wi-Fi help or password help first?"
+        }
+      }
+    ]
+  }
+]

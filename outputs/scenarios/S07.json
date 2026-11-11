@@ -1,0 +1,47 @@
+{
+  "scenario": "S07",
+  "profile": "wifi_outage",
+  "turns": [
+    {
+      "question": "I enabled Wi-Fi and forgot the saved network, but Campus-Demo still will not connect. Check whether Wi-Fi is down. If it is operating, prepare a ticket about this problem.",
+      "answer": "The Wi-Fi service is currently experiencing an outage across campus and is unavailable. Since the service is not operational, I cannot prepare a ticket for your connection issue at this time.\n\nIf you need assistance with anything else or have further questions, please let me know!",
+      "tools_so_far": [
+        "check_service_status"
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "type": "human",
+      "content": "I enabled Wi-Fi and forgot the saved network, but Campus-Demo still will not connect. Check whether Wi-Fi is down. If it is operating, prepare a ticket about this problem.",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "check_service_status",
+          "args": {
+            "service": "Wi-Fi"
+          },
+          "id": "call_ttnXsbLTUJMAzPPsw4Dqh68A",
+          "type": "tool_call"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "content": "{\"status\": \"outage\", \"message\": \"The demo Wi-Fi service is unavailable across campus. The fixture gives no repair time.\"}",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "The Wi-Fi service is currently experiencing an outage across campus and is unavailable. Since the service is not operational, I cannot prepare a ticket for your connection issue at this time.\n\nIf you need assistance with anything else or have further questions, please let me know!",
+      "tool_calls": []
+    }
+  ],
+  "tools": [
+    "check_service_status"
+  ]
+}

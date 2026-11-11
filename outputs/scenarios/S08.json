@@ -1,0 +1,47 @@
+{
+  "scenario": "S08",
+  "profile": "status_unavailable",
+  "turns": [
+    {
+      "question": "Check whether Wi-Fi is down. If it is operating, prepare a ticket. I already enabled Wi-Fi and reconnected, with no success.",
+      "answer": "The status of the Wi-Fi service is currently unknown. What would you like to do next?",
+      "tools_so_far": [
+        "check_service_status"
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "type": "human",
+      "content": "Check whether Wi-Fi is down. If it is operating, prepare a ticket. I already enabled Wi-Fi and reconnected, with no success.",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "",
+      "tool_calls": [
+        {
+          "name": "check_service_status",
+          "args": {
+            "service": "Wi-Fi"
+          },
+          "id": "call_BGVpAYTh5C39vcoMV3wgrUCL",
+          "type": "tool_call"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "content": "{\"status\": \"unknown\", \"message\": \"The demo Wi-Fi status source is unavailable.\"}",
+      "tool_calls": []
+    },
+    {
+      "type": "ai",
+      "content": "The status of the Wi-Fi service is currently unknown. What would you like to do next?",
+      "tool_calls": []
+    }
+  ],
+  "tools": [
+    "check_service_status"
+  ]
+}

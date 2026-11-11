@@ -1,0 +1,22 @@
+{
+  "scenario": "S05",
+  "message": "My Wi-Fi password does not work.",
+  "nodes": [
+    "read_request",
+    "clarify_problem"
+  ],
+  "category": "clarify",
+  "reply": "Do you need Wi-Fi help or password help first?",
+  "trace": [
+    {
+      "read_request": {
+        "category": "clarify"
+      }
+    },
+    {
+      "clarify_problem": {
+        "reply": "Do you need Wi-Fi help or password help first?"
+      }
+    }
+  ]
+}
